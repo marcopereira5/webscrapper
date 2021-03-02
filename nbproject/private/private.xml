@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/CriteriaPage.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/MainApplication.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/Statistics.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/Graph/DirectGraph.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/Graph/InvalidEdgeException.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/GraphUI/GraphView.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/Secondary.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/TreeView.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/WebScrapper/WebScrapperIterative.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/WebScrapper/WebScrapper.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/Persistence/GraphDaoJson.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/Persistence/GraphDaoFile.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/Persistence/GraphDao.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/UndoFeature/GraphViewCaretaker.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/WebScrapper/Webpage.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/SavesPage.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/WebScrapper/Connection.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/UndoFeature/Memento.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/GraphUI/TopBar.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/InitialPage.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/Save.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/WebScrapper/WebScrapperAutomatic.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/LoadGraph.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/Persistence/DaoFactory.java</file>
+            <file>file:/C:/Users/Home/Documents/NetBeansProjects/Student/ProjectoDePa/src/FxPages/SideList.java</file>
+        </group>
+    </open-files>
+</project-private>

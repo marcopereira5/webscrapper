@@ -1,0 +1,411 @@
+@startuml
+
+title __GRAPHVIEWPACKAGE's Class Diagram__\n
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartArrow {
+            + SmartArrow()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartCircularSortedPlacementStrategy {
+            + SmartCircularSortedPlacementStrategy()
+            + place()
+            # sort()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        interface GraphViewPackage.SmartGraphEdge {
+            {abstract} + getUnderlyingEdge()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        interface GraphViewPackage.SmartGraphEdgeBase {
+            {abstract} + attachArrow()
+            {abstract} + getAttachedArrow()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartGraphEdgeCurve {
+            {static} - MAX_EDGE_CURVE_ANGLE : double
+            - inbound : SmartGraphVertexNode<V>
+            - outbound : SmartGraphVertexNode<V>
+            - randomAngleFactor : double
+            - underlyingEdge : Edge<E, V>
+            + SmartGraphEdgeCurve()
+            + SmartGraphEdgeCurve()
+            + attachArrow()
+            + attachLabel()
+            + getAttachedArrow()
+            + getAttachedLabel()
+            + getUnderlyingEdge()
+            - enableListeners()
+            - update()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartGraphEdgeLine {
+            - underlyingEdge : Edge<E, V>
+            + SmartGraphEdgeLine()
+            + attachArrow()
+            + attachLabel()
+            + getAttachedArrow()
+            + getAttachedLabel()
+            + getUnderlyingEdge()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartGraphPanel {
+            + automaticLayoutProperty : BooleanProperty
+            - attractionForce : double
+            - attractionScale : double
+            - edgeClickConsumer : Consumer<SmartGraphEdge<E, V>>
+            - edgeNodes : Map<Edge<E, V>, SmartGraphEdgeBase>
+            - edgesWithArrows : boolean
+            - initialized : boolean
+            - placedEdges : Map<Tuple<SmartGraphVertexNode>, Integer>
+            - repulsionForce : double
+            - theGraph : Graph<V, E>
+            - timer : AnimationTimer
+            - vertexClickConsumer : Consumer<SmartGraphVertex<V>>
+            - vertexNodes : Map<Vertex<V>, SmartGraphVertexNode<V>>
+            + SmartGraphPanel()
+            + SmartGraphPanel()
+            + SmartGraphPanel()
+            + SmartGraphPanel()
+            + automaticLayoutProperty()
+            + getStylableEdge()
+            + getStylableEdge()
+            + getStylableVertex()
+            + getStylableVertex()
+            + init()
+            + setAutomaticLayout()
+            + setEdgeDoubleClickAction()
+            + setVertexDoubleClickAction()
+            + update()
+            - addEdge()
+            - addVertex()
+            - applyForces()
+            - areAdjacent()
+            - computeForces()
+            - createEdge()
+            - enableDoubleClickListener()
+            - getPlotBounds()
+            - getTotalEdgesBetween()
+            - initNodes()
+            - insertNodes()
+            - listOfEdges()
+            - listOfVertices()
+            - loadStylesheet()
+            - removeEdge()
+            - removeNodes()
+            - removeVertice()
+            - removedEdges()
+            - removedVertices()
+            - resetForces()
+            - runLayoutIteration()
+            - unplottedEdges()
+            - unplottedVertices()
+            - updateForces()
+            - updateNodes()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartGraphPanel.Tuple {
+            - first : T
+            - second : T
+            + Tuple()
+            + equals()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartGraphProperties {
+            {static} - DEFAULT_ATTRACTION_FORCE : double
+            {static} - DEFAULT_ATTRACTION_SCALE : double
+            {static} - DEFAULT_EDGE_USE_ARROW : boolean
+            {static} - DEFAULT_EDGE_USE_LABEL : boolean
+            {static} - DEFAULT_EDGE_USE_TOOLTIP : boolean
+            {static} - DEFAULT_FILE : String
+            {static} - DEFAULT_REPULSION_FORCE : double
+            {static} - DEFAULT_VERTEX_ALLOW_USER_MOVE : boolean
+            {static} - DEFAULT_VERTEX_RADIUS : double
+            {static} - DEFAULT_VERTEX_USE_LABEL : boolean
+            {static} - DEFAULT_VERTEX_USE_TOOLTIP : boolean
+            {static} - PROPERTY_ATTRACTION_FORCE : String
+            {static} - PROPERTY_ATTRACTION_SCALE : String
+            {static} - PROPERTY_EDGE_USE_ARROW : String
+            {static} - PROPERTY_EDGE_USE_LABEL : String
+            {static} - PROPERTY_EDGE_USE_TOOLTIP : String
+            {static} - PROPERTY_REPULSION_FORCE : String
+            {static} - PROPERTY_VERTEX_ALLOW_USER_MOVE : String
+            {static} - PROPERTY_VERTEX_RADIUS : String
+            {static} - PROPERTY_VERTEX_USE_LABEL : String
+            {static} - PROPERTY_VERTEX_USE_TOOLTIP : String
+            - properties : Properties
+            + SmartGraphProperties()
+            + SmartGraphProperties()
+            + getAttractionForce()
+            + getAttractionScale()
+            + getRepulsionForce()
+            + getUseEdgeArrow()
+            + getUseEdgeLabel()
+            + getUseEdgeTooltip()
+            + getUseVertexLabel()
+            + getUseVertexTooltip()
+            + getVertexAllowUserMove()
+            + getVertexRadius()
+            {static} + main()
+            - getBooleanProperty()
+            - getDoubleProperty()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        interface GraphViewPackage.SmartGraphVertex {
+            {abstract} + getRadius()
+            {abstract} + getUnderlyingVertex()
+            {abstract} + setPosition()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartGraphVertexNode {
+            - adjacentVertices : Set<SmartGraphVertexNode<T>>
+            - forceVector : PointVector
+            - isDragging : boolean
+            - underlyingVertex : Vertex<T>
+            - updatedPosition : PointVector
+            + SmartGraphVertexNode()
+            + addAdjacentVertex()
+            + addForceVector()
+            + attachLabel()
+            + getAttachedLabel()
+            + getForceVector()
+            + getPosition()
+            + getUnderlyingVertex()
+            + getUpdatedPosition()
+            + isAdjacentTo()
+            + moveFromForces()
+            + removeAdjacentVertex()
+            + removeAdjacentVertices()
+            + resetForces()
+            + setPosition()
+            + setPosition()
+            + updateDelta()
+            - boundCenterCoordinate()
+            - enableDrag()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartGraphVertexNode.PointVector {
+            ~ x : double
+            ~ y : double
+            + PointVector()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartLabel {
+            + SmartLabel()
+            + SmartLabel()
+            + SmartLabel()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        interface GraphViewPackage.SmartLabelledNode {
+            {abstract} + attachLabel()
+            {abstract} + getAttachedLabel()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        interface GraphViewPackage.SmartPlacementStrategy {
+            {abstract} + place()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.SmartRandomPlacementStrategy {
+            + SmartRandomPlacementStrategy()
+            + place()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        interface GraphViewPackage.SmartStylableNode {
+            {abstract} + setStyle()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.UtilitiesBindings {
+            + UtilitiesBindings()
+            {static} + atan2()
+            {static} + toDegrees()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.UtilitiesJavaFX {
+            + UtilitiesJavaFX()
+            {static} + pick()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace raph {
+      namespace iewPackage {
+        class GraphViewPackage.UtilitiesPoint2D {
+            + UtilitiesPoint2D()
+            {static} + attractiveForce()
+            {static} + repellingForce()
+            {static} + rotate()
+            {static} ~ attractiveFunction()
+            {static} ~ repellingFunction()
+        }
+      }
+    }
+  }
+  
+
+  GraphViewPackage.SmartArrow .up.|> GraphViewPackage.SmartStylableNode
+  GraphViewPackage.SmartArrow -up-|> javafx.scene.shape.Path
+  GraphViewPackage.SmartCircularSortedPlacementStrategy .up.|> GraphViewPackage.SmartPlacementStrategy
+  GraphViewPackage.SmartGraphEdgeCurve .up.|> GraphViewPackage.SmartGraphEdgeBase<E,V>
+  GraphViewPackage.SmartGraphEdgeCurve -up-|> javafx.scene.shape.CubicCurve
+  GraphViewPackage.SmartGraphEdgeCurve o-- GraphViewPackage.SmartArrow : attachedArrow
+  GraphViewPackage.SmartGraphEdgeCurve o-- GraphViewPackage.SmartLabel : attachedLabel
+  GraphViewPackage.SmartGraphEdgeLine .up.|> GraphViewPackage.SmartGraphEdgeBase<E,V>
+  GraphViewPackage.SmartGraphEdgeLine -up-|> javafx.scene.shape.Line
+  GraphViewPackage.SmartGraphEdgeLine o-- GraphViewPackage.SmartArrow : attachedArrow
+  GraphViewPackage.SmartGraphEdgeLine o-- GraphViewPackage.SmartLabel : attachedLabel
+  GraphViewPackage.SmartGraphEdgeLine o-- GraphViewPackage.SmartGraphVertexNode : inbound
+  GraphViewPackage.SmartGraphEdgeLine o-- GraphViewPackage.SmartGraphVertexNode : outbound
+  GraphViewPackage.SmartGraphPanel -up-|> javafx.scene.layout.Pane
+  GraphViewPackage.SmartGraphPanel o-- GraphViewPackage.SmartGraphProperties : graphProperties
+  GraphViewPackage.SmartGraphPanel o-- GraphViewPackage.SmartPlacementStrategy : placementStrategy
+  GraphViewPackage.SmartGraphPanel +-down- GraphViewPackage.SmartGraphPanel.Tuple
+  GraphViewPackage.SmartGraphVertexNode .up.|> GraphViewPackage.SmartGraphVertex<T>
+  GraphViewPackage.SmartGraphVertexNode .up.|> GraphViewPackage.SmartLabelledNode
+  GraphViewPackage.SmartGraphVertexNode -up-|> javafx.scene.shape.Circle
+  GraphViewPackage.SmartGraphVertexNode o-- GraphViewPackage.SmartLabel : attachedLabel
+  GraphViewPackage.SmartGraphVertexNode +-down- GraphViewPackage.SmartGraphVertexNode.PointVector
+  GraphViewPackage.SmartLabel .up.|> GraphViewPackage.SmartStylableNode
+  GraphViewPackage.SmartLabel -up-|> javafx.scene.text.Text
+  GraphViewPackage.SmartRandomPlacementStrategy .up.|> GraphViewPackage.SmartPlacementStrategy
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
